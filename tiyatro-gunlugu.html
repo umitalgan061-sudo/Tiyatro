@@ -1565,8 +1565,9 @@ function renderYearTabs() {
   const container = document.getElementById('year-tabs');
   if (!container) return;
 
-  // Etkinliklerdeki yılları topla, her zaman 2025, 2026 ve 2027'yi dahil et
+  // Etkinliklerdeki yılları topla, her zaman 2024, 2025, 2026 ve 2027'yi dahil et
   const years = new Set(events.map(e => parseInt(e.year)));
+  years.add(2024);
   years.add(2025);
   years.add(2026);
   years.add(2027);
